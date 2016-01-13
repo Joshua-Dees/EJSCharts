@@ -256,9 +256,9 @@
 				// JHM: 2007-06-01 - Updated document.getElementsByTagName to __headTag.getElementsByTagName
 				// JHM: 2008-08-08 - Updated regexp to ignore directories named ejschart_
 				for (i = 0; i < scriptTags.length; i++) {
-					if (scriptTags[i].src && scriptTags[i].src.match(/EJSChart(\_[^\/\\]*)?\.js(\?.*)?$/i)) {
+					if (scriptTags[i].src && scriptTags[i].src.match(/EJSChart(\.[^\/\\]*)?\.js(\?.*)?$/i)) {
 						// JHM: 2007-09-11 - Updated to use EJSC.__srcPath
-						EJSC.__srcPath = scriptTags[i].src.replace(/EJSChart(\_[^\/\\]*)?\.js(\?.*)?$/i, "");
+						EJSC.__srcPath = scriptTags[i].src.replace(/EJSChart(\.[^\/\\]*)?\.js(\?.*)?$/i, "");
 						break;
 					}
 				}
